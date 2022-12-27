@@ -28,10 +28,25 @@ struct ContentView: View {
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
-            }.navigationTitle(Text("Crypto"))
-        }.onAppear {
-            cryptoListViewModel.downloadCryptos(url: URL(string: "")!)
+            }
+            .toolbar(content: {
+                Button {
+                    Task.init {
+                        await cryptoListViewModel.downloadCryptosContinuation(url: URL(string: "")!)
+                    }
+                } label: {
+                    Text("Refresh")
+                }
+            })
+            .navigationTitle(Text("Crypto"))
         }
+        .task {
+            await cryptoListViewModel.downloadCryptosContinuation(url: URL(string: "")!)
+//            await cryptoListViewModel.downloadCryptosAsync(url: URL(string: "")!)
+        }
+//        .onAppear {
+//            cryptoListViewModel.downloadCryptos(url: URL(string: "")!)
+//        }
     }
 }
 
