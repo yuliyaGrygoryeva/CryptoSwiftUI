@@ -11,6 +11,8 @@
 		33F28BDE295A883300EC828A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F28BDD295A883300EC828A /* ContentView.swift */; };
 		33F28BE0295A883500EC828A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F28BDF295A883500EC828A /* Assets.xcassets */; };
 		33F28BE3295A883500EC828A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F28BE2295A883500EC828A /* Preview Assets.xcassets */; };
+		33F28BED295A8B1700EC828A /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F28BEC295A8B1700EC828A /* Crypto.swift */; };
+		33F28BF1295A8D1D00EC828A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F28BF0295A8D1D00EC828A /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		33F28BDF295A883500EC828A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33F28BE2295A883500EC828A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		33F28BE4295A883500EC828A /* CryptoAsync.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CryptoAsync.entitlements; sourceTree = "<group>"; };
+		33F28BEC295A8B1700EC828A /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		33F28BF0295A8D1D00EC828A /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,11 @@
 		33F28BDA295A883300EC828A /* CryptoAsync */ = {
 			isa = PBXGroup;
 			children = (
+				33F28BEF295A8CA100EC828A /* Service */,
+				33F28BEA295A8AB800EC828A /* Model */,
+				33F28BEE295A8B3700EC828A /* View */,
+				33F28BEB295A8AC400EC828A /* ViewModel */,
 				33F28BDB295A883300EC828A /* CryptoAsyncApp.swift */,
-				33F28BDD295A883300EC828A /* ContentView.swift */,
 				33F28BDF295A883500EC828A /* Assets.xcassets */,
 				33F28BE4295A883500EC828A /* CryptoAsync.entitlements */,
 				33F28BE1295A883500EC828A /* Preview Content */,
@@ -67,6 +74,37 @@
 				33F28BE2295A883500EC828A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		33F28BEA295A8AB800EC828A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33F28BEC295A8B1700EC828A /* Crypto.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33F28BEB295A8AC400EC828A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		33F28BEE295A8B3700EC828A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33F28BDD295A883300EC828A /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		33F28BEF295A8CA100EC828A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				33F28BF0295A8D1D00EC828A /* WebService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +177,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F28BED295A8B1700EC828A /* Crypto.swift in Sources */,
 				33F28BDE295A883300EC828A /* ContentView.swift in Sources */,
+				33F28BF1295A8D1D00EC828A /* WebService.swift in Sources */,
 				33F28BDC295A883300EC828A /* CryptoAsyncApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +322,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Yuliya-Grygoryeva.CryptoAsync";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -313,7 +353,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Yuliya-Grygoryeva.CryptoAsync";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
